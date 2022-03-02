@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <title>Convert your image in JPG | JPEG | PNG | GIF | WEBP | free</title>
+    <meta name="description" content="imagecrc.com -You can convert any image into jpg,jpeg,png,gif,webp | Online for free | You will see live preview| Special feature for sign-passport size photo."/>
+    <meta name="keywords" content="Image, crop,compress, resize, convert, jpg,jpeg, png, gif, webp,cm,mm,inch,kb,sign and photo,crop passport size photo,crop sign,online free,online image resizer,image crop and compress online,image crop and resize online,image resizer in Kb,image resize in pixel,image resizer in cm,image resize in 20kb,image resize in inches,image crop 100Kb,convert png to jpg,convert jpeg to jpg,convert jpg to png,convert jpeg to png"/>
+    <meta name="author" content="imageCRC"/>
+    <meta name="robots" content="index, follow"/>
+    
+    <link rel="icon" href="../images/myico.ico" type="image/icon type">
+
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="../Bootstrap5/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../Bootstrap5/js/bootstrap.js"></script>
+   
+
+    <style>
+        
+        body{
+         background:#eeebeb;
+        }
+        #Header a:hover{
+          color: #0d6efd;;
+          text-decoration: underline;
+          font-size: 1.5rem;
+        }
+        .active{
+          color: #0d6efd !important;;
+          text-decoration: underline;
+        }
+        #Header a{
+          font-weight: 545;
+          color: black;
+          letter-spacing: .1rem;
+        }
+
+        .mynavitem>a{
+        font: 1.3em Arial,Verdana,sans-serif;
+       }  
+        .mycontainer{
+            margin-top: 0px;
+            min-height: 80vh;
+        }
+
+        .input-img-wrapper {
+        max-height: 500px ;
+        max-width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        background-color: #FFF;
+        overflow-y: auto;
+      }
+      .input-img-wrapper>img {
+       max-width: 100%;
+       max-height: 100%;
+      }
+      .preview-img-wrapper{
+        max-height: 500px ;
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        background-color: #FFF;
+        overflow-y: auto;
+      }
+      .preview-img-wrapper>img{
+       max-width: 100%;
+      }
+ 
+      .hideme{
+        display: none;
+      }
+      #inputFileBtn{
+        background-color: #4d90fe;
+        font-weight: 1000;
+        font-size: 26px;
+        border-radius: 1rem;
+        color:#FFF;
+        text-justify:center;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    #inputFileBtn:hover{
+      font-size: 2rem;
+    }
+
+       #totalcount{
+         color: green;
+         font-size: 2rem;
+       }
+
+       .heading1{
+        justify-content: center;
+        font-size: 2.6rem;
+        font-weight: 500;
+       }
+       .heading2{
+         justify-content: center;
+         font-size: 1.3rem;
+         font-weight: 400;
+         text-align: center;
+         font-family: Verdana,sans-serif;
+       }
+       .makeblue{
+        color: #4d90fe;
+      
+       }
+   </style>
+
+  </head>
+  <body>
+
+    <!-- body-->
+
+   <div class="container-fluid px-0">
+    <div id="Header" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg p-3 mb-2 bg-body rounded">
+            <div class="container-fluid px-0">
+              <a href="../index.html" class="navbar-brand text-decoration-none"> <img src="../images/mylogo.png" alt="imagecrc"> <img src="../images/brandname.png" alt="imagecrc"></a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mymenu"><span class="navbar-toggler-icon" ></span></button>
+               
+                        <div class="collapse navbar-collapse"  id="mymenu">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item mynavitem mx-2"><a href="../index.html" class="nav-link">Home</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../compress/compress.html" class="nav-link">Compress Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../resizewh/resizewh.html" class="nav-link">Resize Width & Height</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../cropimage/cropimage.html" class="nav-link">Crop Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../mingle/mingle.html" class="nav-link">Mingle</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./convertimage.html" class="nav-link active">Convert</a> </li>
+                            </ul>
+                    </div>
+             </div>
+        </nav>  
+    </div>
+    </div>
+
+
+<div class="container mycontainer ">
+      <div class="row mx-auto col-md-8">
+    
+
+        <div class="row mx-auto px-0 py-2">
+          <div class="col-12 ">
+               <div class="row px-0 heading1 mb-2 text-center">Convert Image</div>
+               <div class="row px-0"><p class="heading2">Convert any <span class="makeblue"> JPG, PNG, JPEG, GIF, WEBP </span> image to  any formate <span class="makeblue"> JPG, PNG, JPEG, GIF,WEBP</span> </p></div>
+          </div>            
+        </div> 
+
+      <div class="row mx-auto">
+         <div class="col-md-12 px-0 py-2">
+         
+            <div class="row p-1">
+              <div class="col-sm-8 col-lg-6 mx-auto">
+              <input  onchange="uploadinputImage()" type="file" accept="image/*" class="form-control hideme" id="inputFiles">
+              <button id="inputFileBtn" type="button" class="form-control btn" onclick="document.getElementById('inputFiles').click()">Select an Image</button>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="row mx-0 px-0">
+        <div class="col-md-12 px-0 " id="uploadedMsg">
+           <!--  here success error msg will show--> 
+       </div>
+     </div>
+    
+     <div class="row mx-0 p-1">
+        <div class="col-md-12 px-0">
+          
+          <div class="input-img-wrapper mt-1">
+            <img src="" id="imageINOUT" class="hideme" alt="">
+            <img id="loadingImage" class="hideme" src="./loading_image.gif" alt="loading...">
+          </div> 
+    </div>
+    </div>
+  
+
+      <div class="row mt-3 mx-0 px-0 mx-auto">
+  
+        <div class="btn-group btn-group-sm px-0" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="jpgBtn" value="jpg" autocomplete="off" checked>
+          <label class="btn btn-outline-secondary" for="jpgBtn">JPG</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="jpegBtn" value="jpeg" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="jpegBtn">JPEG</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="pngBtn" value="png" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="pngBtn">PNG</label>
+          <input type="radio" class="btn-check" name="btnradio" id="gifBtn" value="gif" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="gifBtn">GIF</label>
+
+          
+          <input type="radio" class="btn-check" name="btnradio" id="webpBtn" value="webp" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="webpBtn">WEBP</label>
+        
+        </div>
+        
+     </div>
+
+
+       <div class="row mx-auto px-0">
+        <div class="col-md-12 mx-0 py-2 px-0">
+             <div class="row mt-3">
+                      <div class="col-6"> 
+                    <button  id="convertBtn" class="btn btn-primary py-1 px-4 ">Convert</button>
+                 </div>         
+             </div>
+         </div>
+       </div>
+
+
+      <div class="row mx-0 px-0">
+        <div class="col-md-12 px-0 " id="convertMsg">
+           <!--  here success error msg will show--> 
+       </div>
+     </div>
+
+
+      <div class="row mx-auto px-0">
+         
+        <div class="col-md-12 mx-0 py-2 px-0">
+
+             <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-end"> 
+                  <button  id="downloadBtn" class="btn btn-success py-1 px-4 hideme ">Download</button>
+                </div>
+             </div>
+
+         </div>
+       </div>
+
+
+  </div>
+</div>
+
+<!-- footer-->
+<div class="container-fluid bg-dark mt-4">
+    
+      <div class="row py-3" style="color: white;">
+        <div class="col-12 d-flex justify-content-center"> </div>
+      </div>
+</div>
+
+<script>
+
+
+
+  var input = document.getElementById("inputFiles");
+
+ 
+  var convertBtn = document.getElementById('convertBtn')
+  var downloadBtn = document.getElementById('downloadBtn')
+  var jpgBtn = document.getElementById('jpgBtn')
+  var jpegBtn = document.getElementById('jpegBtn')
+  var pngBtn = document.getElementById('pngBtn')
+  var gifBtn = document.getElementById('gifBtn')
+  var radioBtn = document.getElementsByName('btnradio')
+  var imageINOUT = document.getElementById('imageINOUT')
+ 
+
+  var inputImageUrl = ""
+  var imagetype = "jpg"
+ 
+
+function uploadinputImage(){
+   
+  $('#uploadedMsg').hide()
+  $('#convertMsg').hide() 
+    $('#downloadBtn').hide()
+   if (input.files[0]){
+          var formData = new FormData();
+          formData.append('image', input.files[0]);
+
+        
+          $('#loadingImage').show()
+
+          $.ajax('./uploadfile.php', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+              
+
+              if(data.split("||")[1] === "success")
+              {
+                inputImageUrl = data.split("||")[0];  // global variable 
+                showuploadSuccessmsg() 
+               console.log(inputImageUrl)
+               refreshImage(imageINOUT,data.split("||")[0])
+              }
+               else
+               {
+                 showuploadErrormsg()
+                 console.log("data")
+                 inputImageUrl = "";                   
+               } 
+
+               $('#loadingImage').hide()   
+
+            },
+            error: function () {
+              console.log('Upload error');
+              showuploadErrormsg()
+              inputImageUrl = "";
+              $('#loadingImage').hide()   
+            }
+          });
+
+         // $('#loadingImage').hide()                
+
+   }
+   else{
+    inputImageUrl = "";
+   }
+}
+
+function showuploadErrormsg(){
+                 
+               $('#uploadedMsg').empty().append('<div class="alert alert-danger mt-2" role="alert" ><strong>   Failed ...  </strong></div> ');
+               $('#uploadedMsg').show()               
+}
+
+function showuploadSuccessmsg(){
+              $('#uploadedMsg').empty().append('<div class="alert alert-success mt-2" role="alert" ><strong>  Click to convert... </strong></div>');
+              $('#uploadedMsg').show()
+            
+}
+
+// applying event listener  on jpg,png,jpeg,gif radio buttons
+for (var i = 0; i < radioBtn.length; i++) {
+  radioBtn[i].onclick = function() {
+    
+    for(var i = 0; i < radioBtn.length; i++){
+        if(radioBtn[i].checked){
+            imagetype = radioBtn[i].value;
+            console.log(imagetype)
+        }
+    }
+
+    $('#convertMsg').hide() 
+    $('#downloadBtn').hide()
+  }
+}
+
+convertBtn.addEventListener("click", (event)=>{
+     event.preventDefault()
+    $('#convertMsg').hide() 
+    $('#downloadBtn').hide()
+     console.log(imagetype)
+
+ if(inputImageUrl !== ""){
+         
+           $('#loadingImage').show()         
+          var urlofimage = imageINOUT.src
+          urlofimage=urlofimage.split("?t=")[0];  // removing time stamp (time stamp added to reload image)
+
+          var formData = new FormData();
+          formData.append('filepath',  urlofimage);
+          formData.append('imagetype',imagetype)
+          $.ajax('./convertimage.php', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+
+              console.log(response)         
+
+               if(response.split("||")[1] === "success")
+               {
+
+                refreshImage(imageINOUT,response.split("||")[0])
+                showconvertSuccessmsg()
+                $('#downloadBtn').show()  // now download button must show
+               }
+              else 
+               {
+                showconvertErrormsg()
+                $('#downloadBtn').hide()
+               }
+               $('#loadingImage').hide();  
+            },
+            error: function () {
+              showconvertErrormsg()  
+              console.log('Upload error');
+              $('#downloadBtn').hide()
+              $('#loadingImage').hide();  
+            }
+          });
+
+ 
+     
+     } 
+     else{
+      showconvertErrormsg()
+      $('#downloadBtn').hide()
+      
+     }
+
+    // $('#loadingImage').hide();  
+      
+});
+
+
+function showconvertErrormsg(){
+                 $('#convertMsg').empty().append('<div class="alert alert-danger mt-2" role="alert" ><strong>   Conversion Failed ...  </strong></div> ');
+                 $('#convertMsg').show()               
+}
+
+function showconvertSuccessmsg(){
+                $('#convertMsg').empty().append('<div class="alert alert-success mt-2" role="alert" ><strong>  Image converted successfully... </strong></div>');
+                $('#convertMsg').show()
+              
+}
+
+downloadBtn.addEventListener("click", (event)=>{
+    event.preventDefault()
+    
+    if(inputImageUrl !== "")   // dynamically create anchor link and download
+    {
+                  const link = document.createElement('a');
+                  link.href = imageINOUT.src;
+                  link.setAttribute('download','image.'+imagetype);
+                  document.body.appendChild(link);
+                  link.click();   // click anchor so download start
+
+    }
+    else{
+      alert("First select image and convert... ")
+    }
+    
+  });
+
+  function refreshImage(imgElement, imgURL){    
+  // create a new timestamp 
+  var timestamp = new Date().getTime();  
+  var queryString = "?t=" + timestamp;    
+  imgElement.src = imgURL + queryString;    
+} 
+
+</script>
+  
+
+</body>
+
+
+
+</html>

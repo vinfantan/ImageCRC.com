@@ -1,0 +1,12 @@
+           
+               width     height
+brandname.png   136         30     pixels
+mylogo.png       41          32      pixels
+myico.ico        32          25      pixels
+
+
+
+Original Sizes-   
+               width     height
+brandname.png   738         164      pixels
+mylogo.png      1300        1000      pixels

@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Crop| Resize| Compress| Convert Image| cm,pixel,inch| in KB</title>
+    <meta name="description" content="imagecrc.com -You can crop,resize,compress,convert images in mm,cm,pixel,inche,KB | see live preview | jpg,jpeg,png,webp| Special feature for sign-photo."/>
+    <meta name="keywords" content="Image, crop,compress, resize, convert, jpg,jpeg, png, gif, webp,cm,mm,inch,kb,sign and photo,online free,online image resizer,image crop and compress online,image crop and resize online,image resizer in Kb,image resize in pixel,image resizer in cm,image resize in 20kb,image resize in inches,image crop 100Kb,convert png to jpg,convert jpeg to jpg,convert jpg to png,convert jpeg to png"/>
+    <meta name="author" content="imageCRC"/>
+    <meta name="robots" content="index, follow"/>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="./Bootstrap5/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="./jQuery/jquery-3.2.1.min.js"></script>
+    <script src="./Bootstrap5/js/bootstrap.js"></script>
+
+    <link rel="icon" href="./images/myico.ico" type="image/icon type">
+
+
+   
+
+    <style>
+        
+        body{
+         background:#eeebeb;
+        }
+        #Header a:hover{
+          color: #0d6efd;
+          text-decoration: underline;
+          font-size: 1.5rem;
+        }
+        .active{
+          color: #0d6efd !important;
+          text-decoration: underline;
+        }
+        #Header a{
+          font-weight: 545;
+          color: black;
+          letter-spacing: .1rem;
+        }
+
+        .mynavitem>a{
+        font: 1.3em Arial,Verdana,sans-serif;
+       }  
+        .mycontainer{
+            margin-top: -4rem;
+            min-height: 80vh;
+         }
+        
+         tr{
+          font: 1.5em Arial,Verdana,sans-serif; 
+           font-weight: 400;
+           letter-spacing: .1rem;
+
+         }
+         tr>td>a{
+           color: #FFF!important;
+          
+         }
+          
+         tr>td:hover{
+          
+          font-size: 2.3rem;
+          cursor: pointer;
+          letter-spacing: .3rem;
+          
+         }
+
+       .message2{
+        font-weight: 400;
+         font-size: 1.5rem;
+         font-family: Verdana,sans-serif;
+          word-spacing: .1rem;
+       }
+       #totalcount{
+         color: green;
+         font-size: 1.5rem;
+       }
+
+
+       .welcomemessage{
+        color: white;
+        font-family:monospace;
+       }
+
+
+       .heading1{
+        justify-content: center;
+        font-size: 2.6rem;
+        font-weight: 500;
+       }
+       
+       .makeblue{
+        color: #f44336;
+      
+       }
+       .card-header{
+        background-color:#0d6efdbd;
+       }
+       .card-img-top{
+        height: 6.5rem ;
+       width: 6.5rem;
+       }
+       .image-card>.card-body{
+         padding-top: 0;
+         padding-bottom: .5rem;
+
+       }
+      .image-card{
+        color: black!important;   /* text-color */
+      }
+
+       .image-card:hover{
+         background-color: #dfe3e9;    
+       }
+       .image-card>.row>.col-8>.card-body>.card-text{
+         font-size: .9rem!important;
+         color: #636a75c4;
+       }
+       p{
+         font-size: .9rem;
+         font-weight: 400;
+         color: #444343fa;
+         font-family: Verdana,sans-serif;
+       }
+       .features-card>.card>.card-body:hover{
+         background-color: #dfe3e9;
+         
+       }
+       
+       .features-card>.card>.card-body{
+        padding: 10px;
+      
+       }
+       .features-card{
+         margin-bottom: 1rem;
+       }
+       .features-card>.card{
+         margin: 1rem;
+         border: none;
+       }
+
+       .main-message{
+         height: 19rem;
+         width: 100;
+         background-image:-webkit-linear-gradient(to bottom right,rgba(221, 7, 7, 0.89),rgb(146, 64, 64),#236d0c,rgb(160, 160, 3),rgba(184, 17, 17, 0.685),#857342);
+         background-image: -moz-linear-gradient(to bottom right,rgba(221, 7, 7, 0.89),rgb(146, 64, 64),#236d0c,rgb(160, 160, 3),rgba(184, 17, 17, 0.685),#857342);
+         background-image:-ms-linear-gradient(to bottom right,rgba(221, 7, 7, 0.89),rgb(146, 64, 64),#236d0c,rgb(160, 160, 3),rgba(184, 17, 17, 0.685),#857342);
+         background-image: -o-linear-gradient(to bottom right,rgba(221, 7, 7, 0.89),rgb(146, 64, 64),#236d0c,rgb(160, 160, 3),rgba(184, 17, 17, 0.685),#857342);
+         background-image: linear-gradient(to bottom right,rgba(221, 7, 7, 0.89),rgb(146, 64, 64),#236d0c,rgb(160, 160, 3),rgba(184, 17, 17, 0.685),#857342);
+
+
+        }
+   </style>
+
+  </head>
+  <body>
+
+    <!-- body-->
+
+   <div class="container-fluid px-0">
+    <div id="Header" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg p-3  bg-body rounded">
+            <div class="container-fluid px-0">
+
+              <a href="./index.html" class="navbar-brand text-decoration-none"> <img src="./images/mylogo.png" alt=""> <img src="./images/brandname.png" alt=""></a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mymenu"><span class="navbar-toggler-icon" ></span></button>
+               
+                        <div class="collapse navbar-collapse"  id="mymenu">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item mynavitem mx-2"><a href="./index.html" class="nav-link active">Home</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./compress/compress.html" class="nav-link">Compress Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./resizewh/resizewh.html" class="nav-link">Resize Width & Height</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./cropimage/cropimage.html" class="nav-link">Crop Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./mingle/mingle.html" class="nav-link">Mingle</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./convertimage/convertimage.html" class="nav-link">Convert</a> </li>
+                              </ul>
+                    </div>
+             </div>
+        </nav>  
+    </div>
+    </div>
+
+
+    <div class="container-fluid main-message px-0 mx-0">
+            
+             <div class="row pt-4 mx-0 px-0">
+               <div class="col-md-9 mx-auto text-center text-white">
+                 <h1>Free Online Image Editor</h1>
+                 <p class="text-white">Crop, Compress, Resize, Convert</p>
+               </div>
+             </div>
+             <div class="row pt-4 mx-0 px-0">
+              <div class="col-md-9 mx-auto text-center text-white">
+                <h2>We believe in real world problem solving</h2>
+                <p class="text-white"></p>
+              </div>
+            </div>
+         
+    </div>
+
+
+    <div class="container mycontainer px-0">
+        <div class="row mx-auto col-md-8">
+         
+
+
+          <div class="row mx-auto pt-1 px-0">
+            <div class="col-sm-6 px-0" >
+              <a href="./cropimage/cropimage.html" class="text-decoration-none">
+              <div class="card h-100 image-card">
+                    <div class="row mx-0 px-0">
+                    <div class="col-4">
+                    <img src="./images/indexpageimages/crop.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Crop Images</h5>
+                      <p class="card-text">Crop images (mm,cm,pixel,inch)</p>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-sm-6 px-0" >
+              <a href="./compress/compress.html" class="text-decoration-none">
+              <div class="card h-100 image-card">
+                <div class="row mx-0 px-0">
+                  <div class="col-4">
+                  <img src="./images/indexpageimages/compress.png" class="card-img-top" alt="...">
+                  </div>
+                  <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Compress Images</h5>
+                    <p class="card-text">Compress images in KB </p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+             </div>
+         </div>
+
+         <div class="row mx-auto px-0">
+          <div class="col-sm-6 px-0" >
+            <a href="./convertimage/convertimage.html" class="text-decoration-none">
+            <div class="card h-100 image-card">
+                  <div class="row mx-0 px-0">
+                  <div class="col-4">
+                  <img src="./images/indexpageimages/convert.png" class="card-img-top" alt="...">
+                  </div>
+                  <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Convert Image</h5>
+                    <p class="card-text">Convert your image to jpg,jpeg,png,gif,webp</p>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+            </a>
+           </div>
+          
+          <div class="col-sm-6 px-0" >
+            <a href="./resizewh/resizewh.html" class="text-decoration-none">
+            <div class="card h-100 image-card">
+                  <div class="row mx-0 px-0">
+                  <div class="col-4">
+                  <img src="./images/indexpageimages/resize.png" class="card-img-top" alt="...">
+                  </div>
+                  <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Resize Images</h5>
+                    <p class="card-text">Resize images (mm,cm,pixel,inch)</p>
+                  </div>
+                  </div>
+                  </div>
+            </div>
+            </a>
+          </div>
+
+       </div>
+
+       <div class="row mx-auto px-0">
+        <div class="col-sm-6 px-0" >
+          <a href="./mingle/mingle.html" class="text-decoration-none">
+              <div class="card h-100 image-card">
+                <div class="row mx-0 px-0">
+                <div class="col-4">
+                <img src="./images/indexpageimages/combine.png" class="card-img-top" alt="...">
+                </div>
+                <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">CRC</h5>
+                  <p class="card-text">Crop,Resize,Compress in one go</p>
+                </div>
+                </div>
+                </div>
+              </div>
+          </a>
+         </div>
+         <div class="col-sm-6 px-0" >
+          <a href="./mingle/mingle.html" class="text-decoration-none">
+              <div class="card h-100 image-card">
+                <div class="row mx-0 px-0">
+                <div class="col-4">
+                <img src="./images/indexpageimages/sign-photo.png" class="card-img-top" alt="...">
+                </div>
+                <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Make sign & photo</h5>
+                  <p class="card-text">Make your sign-photo</p>
+                </div>
+                </div>
+                </div>
+              </div>
+          </a>
+         </div>
+     </div>
+
+    
+          <div class="row mx-auto pt-1 my-3 pb-1 px-0">
+            <div class="col-12 px-0" >
+            
+
+              <div class="card">
+                <div class="shadow card-header pt-2 pb-0">
+                  <h4 class="welcomemessage p-0">Welcome to <span class="" style="" >imageCRC.com</span></h4>
+                </div>
+                <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p class="shadow p-3 mb-1 bg-white rounded"> You can crop, resize (width & height), Compress & Convert  <span class="makeblue"> JPG, PNG, JPEG, GIF, WEBP </span> images.
+                  </p>
+                </blockquote>
+                </div>
+                <div class="card-footer text-muted">
+                  <div class="row mx-auto mb-0 px-0 ">
+                    <div class="col-12 message2">
+                        <div class="d-flex justify-content-center">
+                        <div class="d-inline text-danger"> Uses </div> ::
+                        <div id="totalcount" class="d-inline px-2"> 0 </div>
+                        </div>
+                    </div>            
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="card mt-3">
+                <div class="shadow card-header pt-2 pb-0">
+                  <h5 class="welcomemessage p-0">Special Features</h5>
+                </div>
+                <div class="card-body p-0 pt-2 pb-4">
+
+                  <div class="row mx-auto px-0">
+                    <div class="col-sm-6 px-0 features-card" >
+                      <div class="card h-100">
+                        <div class="card-body shadow">
+                          <h5 class="card-title">Mingle</h5>
+                          <p class="card-text"><a href="./mingle/mingle.html" style="text-decoration:none"><span class="text-success">  Mingle </span> </a>here you can perform all operation on image at once. and you will see your <span class="makeblue"> image preview</span>.
+                            It helps you a lot when you have to make your <span class="makeblue"> sign</span> and <span class="makeblue"> passport size photo</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 px-0 features-card" >
+                          <div class="card h-100">
+                            <div class="card-body shadow">
+                              <h5 class="card-title">Preview</h5>
+                              <p class="card-text">Before you start downloading the image. You'll see, How your image will look like after each successfully performed operation.</p>
+                            </div>
+                          </div>
+                     </div>
+                 </div>
+
+
+                 <div class="row mx-auto px-0">
+                  <div class="col-sm-6 px-0 features-card" >
+                    <div class="card h-100">
+                      <div class="card-body shadow">
+                        <h5 class="card-title">Convert</h5>
+                        <p class="card-text">You can convert any image formate <span class="makeblue"> JPEG, JPG, PNG, GIF,WEBP </span> to any other image formate <span class="makeblue"> JPEG, JPG, PNG, GIF,WEBP</span>.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 px-0 features-card" >
+                        <div class="card h-100">
+                          <div class="card-body shadow">
+                            <h5 class="card-title">Resize</h5>
+                            <p class="card-text">You can resize your image by giving width and height in <span class="makeblue">  Milimeter, Centimeter, Inches & Pixel</span>
+                            </p>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+
+
+               <div class="row mx-auto px-0">
+                <div class="col-sm-6 px-0 features-card" >
+                  <div class="card h-100 ">
+                    <div class="card-body shadow">
+                      <h5 class="card-title">Compress</h5>
+                      <p class="card-text">You can compress image size by giving compression percentage <span class="makeblue"> (1-100%)</span>.</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-sm-6 px-0 features-card" >
+                      <div class="card h-100">
+                        <div class="card-body shadow">
+                          <h5 class="card-title">Zoom & Zoom out</h5>
+                          <p class="card-text">Infinite & Smooth Zoom in & Zoom out. </p>
+                        </div>
+                      </div>
+                 </div>
+             </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+    </div>
+    </div>  
+
+<!-- footer-->
+<div class="container-fluid bg-dark mt-4">
+    
+      <div class="row py-3" style="color: white;">
+        <div class="col-12 d-flex justify-content-center"></div>
+      </div>
+</div>
+
+<script>
+  
+  var totalCount = document.getElementById('totalcount') 
+  var count=0;
+function getTotalCount(){          
+       var formData = new FormData();
+       formData.append('totalcount',1);  // just set some value 
+
+       $.ajax('gettototaluses.php', {
+         method: "POST",
+         data: formData,
+         processData: false,
+         contentType: false,
+         success: function (response) {
+             count = response
+             console.log(response)
+            myFunction(0,count);
+         },
+         error: function () {
+           console.log('Count error');
+         }
+       });
+
+}
+window.onload = getTotalCount;
+
+function myFunction(i,n) {
+(function doStuff() {
+console.log(i);
+document.getElementById('totalcount').innerHTML = i;
+i += 1;
+
+if (i <= n) {
+ setTimeout(doStuff, 10);
+}
+}());
+}
+
+
+
+</script>
+</body>
+  
+
+</html>

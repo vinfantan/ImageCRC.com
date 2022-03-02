@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <title>Crop,Resize,Compress image in mm,cm,pixel,inch |Sign-Photo</title>
+    <meta name="description" content="imagecrc.com - You can crop,resize,compress,convert your image in mm,cm,inch,pixel,KB| Special feature to make sign and passport size photo. | Online free."/>
+    <meta name="keywords" content="Image, crop,compress, resize, convert, jpg,jpeg, png, gif, webp,cm,mm,inch,kb,sign and photo,crop passport size photo,crop sign,online free,online image resizer,image crop and compress online,image crop and resize online,image resizer in Kb,image resize in pixel,image resizer in cm,image resize in 20kb,image resize in inches,image crop 100Kb,convert png to jpg,convert jpeg to jpg,convert jpg to png,convert jpeg to png"/>
+    <meta name="author" content="imageCRC"/>
+    <meta name="robots" content="index, follow"/>
+  
+    <!-- link cropper.css and cropper.js files then only cropper work-->
+   <link rel="stylesheet" href="../cropperjs/dist/cropper.css">
+   <script src="../cropperjs/dist/cropper.js"></script>
+
+      <!--  My script to check allowed size of PHP server -->
+      <script src="../checksize.js"></script>
+
+      <link rel="icon" href="../images/myico.ico" type="image/icon type">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="../Bootstrap5/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../Bootstrap5/js/bootstrap.js"></script>
+
+
+  
+
+    <style>
+        
+        body{
+         background:#eeebeb;
+        }
+        #Header a:hover{
+          color: #0d6efd;
+          text-decoration: underline;
+          font-size: 1.5rem;
+        }
+        .active{
+          color: #0d6efd !important;;
+          text-decoration: underline;
+        
+        }
+        #Header a{
+          font-weight: 545;
+          color: black;
+          letter-spacing: .1rem;
+        }
+
+        .mynavitem>a{
+        font: 1.3em Arial,Verdana,sans-serif;
+       }  
+
+        .mycontainer{
+            margin-top: 0px;
+            min-height: 80vh;
+        }
+
+      .input-img-wrapper {
+        max-height: 500px ;
+        max-width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        overflow-y: auto;
+        background-color: #FFF;
+      }
+      .input-img-wrapper>img {
+       max-width: 100%;
+      }
+      .preview-img-wrapper{
+        max-width: 100%;
+        max-height: 50vh;
+        background-color: #FFF;
+        display: flex;
+        justify-content: center;
+
+      }
+      .preview-img-wrapper>img{
+       max-width: 100%;
+       max-height: 100%;
+       
+      }
+      .hideme{
+        display: none;
+      }
+      #inputFileBtn{
+        background-color: #4d90fe;
+        font-weight: 1000;
+        font-size: 26px;
+        border-radius: 1rem;
+        color:#FFF;
+        text-justify:center;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    #inputFileBtn:hover{
+      font-size: 2rem;
+    }
+
+    .dimension{
+       color: red;
+       font-size: 1rem;
+       font-weight: 600;
+    }
+
+
+
+       .heading1{
+        justify-content: center;
+        font-size: 2.6rem;
+        font-weight: 500;
+       }
+       .heading2{
+         justify-content: center;
+         font-size: 1.3rem;
+         font-weight: 400;
+         text-align: center;
+         font-family: Verdana,sans-serif;
+       }
+       .makeblue{
+        color: #4d90fe;
+      
+       }
+     
+   </style>
+
+  </head>
+  <body>
+
+    <!-- body-->
+
+   <div class="container-fluid px-0">
+    <div id="Header" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg p-3 mb-3 bg-body rounded">
+            <div class="container-fluid px-0">
+              <a href="../index.html" class="navbar-brand text-decoration-none"> <img src="../images/mylogo.png" alt="imagecrc"> <img src="../images/brandname.png" alt="imagecrc"></a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mymenu"><span class="navbar-toggler-icon" ></span></button>
+               
+                        <div class="collapse navbar-collapse"  id="mymenu">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item mynavitem mx-2"><a href="../index.html" class="nav-link">Home</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../compress/compress.html" class="nav-link">Compress Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../resizewh/resizewh.html" class="nav-link">Resize Width & Height</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../cropimage/cropimage.html" class="nav-link">Crop Image</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="./mingle.html" class="nav-link active">Mingle</a> </li>
+                                <li class="nav-item mynavitem mx-2"><a href="../convertimage/convertimage.html" class="nav-link">Convert</a> </li>
+                            </ul>
+                    </div>
+             </div>
+        </nav>  
+    </div>
+    </div>
+
+
+<div class="container mycontainer">
+      <div class="row mx-auto col-md-8">
+       
+        <div class="row mx-auto px-0 py-2">
+          <div class="col-12 ">
+               <div class="row px-0 heading1 mb-2 text-center">Crop, Resize, Compress</div>
+               <div class="row px-0"><p class="heading2">Crop, Resize, Compress Images in one go. <span class="makeblue"> JPG, PNG, JPEG, GIF, WEBP </span>. View <span class="makeblue">preview </span> before download. </p></div>
+          </div>            
+        </div>  
+
+      <div class="row mx-auto">
+         <div class="col-md-12 px-0 py-2">
+                  
+
+            <div class="row p-1">
+              <div class="col-sm-8 col-lg-6 mx-auto">
+              <input  onchange="showInputImage()" type="file" accept="image/*" class="form-control hideme" id="inputFiles">
+              <button id="inputFileBtn" type="button" class="form-control btn" onclick="document.getElementById('inputFiles').click()">Select an Image</button>
+               </div>
+            </div>
+
+           <div id="cropboxSize" class="row d-flex justify-content-end  mx-0 mt-3 mb-2 dimension">
+             0 | 0 pixel
+           </div>
+
+            <div class="input-img-wrapper mt-2 p-1">
+              <img src="" id="inputImageShow" alt="">
+              <img id="loadingImage2" src="./loading_image.gif" class="hideme" alt="loading...">
+            </div> 
+
+            <div class="row mt-2  p-1 hideme" id="rotateANDresetDIV">
+                <div class="col-sm-4 col-6 " style="align-self: center;">
+                    <div class="input-group">
+                      <div class="input-group-text" id="rotate">Rotate</div>
+                      <input type="number" id="rotateInput" oninput="rotateImage(this.value)" class="form-control" placeholder="Degree" aria-label="Input group example" aria-describedby="rotate">
+                    </div>
+                </div>
+                <div class="col-sm-8 col-6 d-flex justify-content-end my-2 mx-0">
+                  <button type="button" id="resetBtn" onclick="resetCropper()" class="btn btn-secondary px-4">Reset</button>
+                </div>
+           </div>
+
+
+         </div>
+      </div>
+       
+      <div class="row mx-auto px-md-4 px-0"> 
+        <div class="col-md-12 mx-0 px-0"> 
+          <div id="zoom_msg" class="alert alert-success alert-dismissible fade show hideme" role="alert">
+            <strong> Zoom In & Zoom Out Enabled</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+       </div>
+     </div>
+
+       <div class="row mx-auto px-md-4 px-0">
+         
+        <div class="col-md-12 mx-0 py-2 px-0">
+              <div class="row">
+                    <div class="preview-img-wrapper p-1" id="croppedImageDiv">
+
+                      <img id="loadingImage" src="./loading_image.gif" class="hideme" alt="loading...">
+                      <img id="croppedImg"  name="image" src="" alt="">
+                    </div>
+
+                  <div class="row px-0 mx-0 my-2" >
+                    <div class="d-flex justify-content-end dimension">
+                      <div class="p-1" id="croppedpreviewsize"> 0 | 0</div>
+                      <div class="mx-1 p-1" id="labelWH" >pixel</div>
+                    </div>
+                  </div>
+
+              </div>
+
+         <div class="row my-1">
+           <div class="col-7 " style="align-self: center">
+                <div class="row ">
+                  <div class="col-10 ">
+                     <h5 id="fileinKB" class="align-middle my-auto">  0.0 KB</h5>
+                  </div>
+                  <div class="col-2"></div>
+                </div>       
+           </div>
+           <div class="col-5 d-flex justify-content-end my-1">
+             <button type="button" id="compressBtn" class="btn btn-danger py-1">Compress</button>
+             
+           </div>
+         </div>
+         <div class="row mt-3">
+
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="btnradio" id="pixelbtn" value="pixelselected" autocomplete="off" checked>
+              <label class="btn btn-outline-secondary" for="pixelbtn">Pixel</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="mmbtn" value="mmselected" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="mmbtn">MM</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="cmbtn" value="cmselected" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="cmbtn">CM</label>
+              <input type="radio" class="btn-check" name="btnradio" id="inchbtn" value="inchselected" autocomplete="off">
+              <label class="btn btn-outline-secondary" for="inchbtn">Inch</label>
+            </div>
+            
+         </div>
+         <div class="row my-2">
+           <div class="col-12">
+              <div class="input-group">
+                <div class="input-group-text" id="btnGroupAddon11">width</div>
+                <input type="number" id="inputWidth" oninput="changeCropBox(this)" class="form-control" placeholder="Enter Width" aria-label="Input group example" aria-describedby="btnGroupAddon11">
+                <div class="input-group-text" id="btnGroupAddon12">pixel</div>
+              </div>
+           </div>
+        </div>
+           <div class="row my-1">
+           <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-text" id="btnGroupAddon21">Height</div>
+              <input type="number" id="inputHeight" oninput="changeCropBox(this)" class="form-control" placeholder="Enter height" aria-label="Input group example" aria-describedby="btnGroupAddon21">
+              <div class="input-group-text" id="btnGroupAddon22">pixel</div> 
+            </div>
+            </div>
+         </div>
+         <div class="row mt-3">
+               <div class="col-6 ">
+                  <button type="button" id="cropBtn" class="btn btn-primary py-1 px-4"> Crop </button>
+               </div>
+               <div class="col-6 d-flex justify-content-end">
+                <button  id="resizeBtn" class="btn btn-danger py-1 px-4">Resize</button> 
+               </div>
+         </div>
+         <div class="row mt-3">
+             <div class="col-12 d-flex justify-content-end"> 
+             <button  id="downloadBtn" class="btn btn-success py-1 px-4 hideme">Download</button>
+            </div>
+         </div>
+
+         </div>
+       </div>
+
+
+  </div>
+</div>
+
+<!-- footer-->
+<div class="container-fluid bg-dark mt-4">
+    
+      <div class="row py-3" style="color: white;">
+        <div class="col-12 d-flex justify-content-center"></div>
+        </div>
+</div>
+
+
+<script>
+
+
+  var input_image = document.getElementById("inputImageShow");
+  var input = document.getElementById("inputFiles");
+  var input_Width =document.getElementById("inputWidth");
+  var input_Height =document.getElementById("inputHeight");
+  var pixelBtn = document.getElementById('pixelbtn')
+  var mmBtn = document.getElementById('mmbtn')
+  var cmBtn = document.getElementById('cmbtn');
+  var inchBtn = document.getElementById('inchbtn');
+  var radioBtn = document.getElementsByName('btnradio');
+  var width_label = document.getElementById('btnGroupAddon12');
+  var height_label = document.getElementById('btnGroupAddon22');
+  var cropBtn = document.getElementById('cropBtn');
+
+  var resizeBtn = document.getElementById('resizeBtn')
+  var croppedImg = document.getElementById('croppedImg');
+ 
+  var downloadBtn = document.getElementById('downloadBtn')
+
+  var rotateANDresetDIV = document.getElementById('rotateANDresetDIV') // this div is hide so unhide div when image loaded
+  var cropboxSize= document.getElementById('cropboxSize')
+  var croppedpreviewsize = document.getElementById('croppedpreviewsize')
+  var labelWH  = document.getElementById('labelWH')
+  var compressBtn = document.getElementById('compressBtn')
+  var croppedImageDiv  = document.getElementById('croppedImageDiv')
+
+  var width_crop_box = 0;   // global variable
+  var height_crop_box = 0;   // global variable
+  var cropper=""
+
+  var croppedImg_width=  -1;
+  var croppedImg_height= -1;
+
+  var previousDegree = 0; // global variable it remember what was previous degree rotated
+  var croppedImageURL="";
+  
+  var labelWH_width_px=0;
+  var labelWH_height_px=0;
+
+function showInputImage(){
+  
+   if (input.files[0]){
+    $('#downloadBtn').hide()
+   $('#inputImageShow').hide()
+   $('#loadingImage2').show()
+   let file = input.files[0]
+   let reader = new FileReader()
+   console.log(reader)
+   
+   reader.onload = function(e){
+    
+     
+     if(cropper !== "")   // cropper initialized then first destroy it
+    { 
+      input_image.cropper.destroy()
+    }
+
+
+     $('#loadingImage2').hide()
+     input_image.src = reader.result
+     $('#inputImageShow').show()
+     inializeCropper()
+   };
+    reader.readAsDataURL(file) 
+
+    rotateANDresetDIV.classList.remove("hideme")
+    $('#zoom_msg').show()
+    previousDegree=0;
+   }
+
+
+ }
+
+ 
+// applying event listener  on Pixel,MM,CM,Inch radio buttons
+for (var i = 0; i < radioBtn.length; i++) {
+  radioBtn[i].onclick = function() {
+    selected_value = this.value;
+    setwidthheight_accroding_to_selectedBtn();  // now input field also get cropbox size
+    if((croppedImg.width !== 0 || croppedImg.height !== 0))
+    {
+      updatecroppedimagelabel(labelWH_width_px,labelWH_height_px);      // both are global variable contains only pixel size
+    }
+
+  }
+}
+ 
+ function setwidthheight_accroding_to_selectedBtn() // height and width is in pixel value
+ {
+    var selected_value;
+    for(var i = 0; i < radioBtn.length; i++){
+        if(radioBtn[i].checked){
+            selected_value = radioBtn[i].value;
+        }
+    }
+     // console.log("i call")
+     var height = height_crop_box;
+    var width = width_crop_box;
+    
+    if(selected_value == "pixelselected")
+    {
+      // no change because width height is already in pixels
+      width_label.innerHTML="pixel"
+      height_label.innerHTML ="pixel"
+      labelWH.innerHTML = "pixel"
+    }
+    else if(selected_value == "mmselected")
+    {
+      width =  10 * width * 2.54 / 96
+      height = 10 * height * 2.54 / 96
+      width_label.innerHTML="mm"
+      height_label.innerHTML ="mm"
+      labelWH.innerHTML = "mm"
+      
+    }
+   else if(selected_value == "cmselected")
+   {
+      width = width * 2.54 / 96
+      height = height * 2.54 / 96
+      width_label.innerHTML="cm"
+      height_label.innerHTML ="cm"
+      labelWH.innerHTML = "cm"
+      
+   }
+    else if(selected_value == "inchselected")
+    {
+      width = width / 96
+      height = height / 96
+      width_label.innerHTML="inch"
+      height_label.innerHTML ="inch"
+      labelWH.innerHTML ="inch"
+      
+    }
+    else{
+      console.log("Some error occured in setwithheight function")
+      return
+    }
+   cropboxSize.innerHTML = parseFloat(width).toFixed(2) + " | " + parseFloat(height).toFixed(2) + " "+width_label.innerHTML;
+   
+ }
+
+
+ function inializeCropper(){
+  // let cropper="";
+ //  output.cropper.destroy();
+  var height = 60
+  var width = 170
+    cropper = new Cropper(input_image, {   // cropper is a global variable
+        crop: function(event){
+        
+       width_crop_box=event.detail.width   // global variable
+       height_crop_box=event.detail.height   // global variable
+       setwidthheight_accroding_to_selectedBtn()  // this function set height and width in input image label
+       
+      }
+
+    })
+  }
+
+cropBtn.addEventListener("click", (event) => {
+  event.preventDefault()
+   // get result to data uri
+   if(cropper !== ""){
+    croppedImageURL = cropper.getCroppedCanvas({  // croppedImageURL is global variable  it is used for sennding file on server
+     // input value
+    }).toDataURL();
+    
+   //croppedImg.src = croppedImageURL    // don't set now set by ajax after uploading image on srver
+
+     setwidthheight_accroding_to_selectedBtn()  // it will set input image  width height label accroding to cropbox size 
+     
+    var t= isSizeAllow(width_crop_box,height_crop_box) // check PHP server allowed ajax datasize
+     if(t === true)
+     {
+       upload_croppedImage() // uploading on server and getting size
+      $('#downloadBtn').show()
+     }
+    else{
+      alert("Too Big Crop...")
+    }
+
+   }else{
+     alert("******* First Select an Image  *******")
+   }
+
+  });
+
+  downloadBtn.addEventListener("click", (event)=>{
+    event.preventDefault()
+    
+    if(cropper !== ""){
+    let imgsrc = document.getElementById('croppedImg').src;
+    console.log(imgsrc)
+    if(imgsrc !== "")   // dynamically create anchor link and download
+    {
+                  const link = document.createElement('a');
+                  link.href = imgsrc;
+                  link.setAttribute('download', 'image.jpg');
+                  document.body.appendChild(link);
+                  link.click();   // click anchor so download start
+
+    }
+    }
+    
+  });
+
+function changeCropBox(element){
+ 
+}
+
+function rotateImage(degree){
+if(cropper !== "")
+{
+  
+  cropper.rotate(-previousDegree)
+  cropper.rotate(degree)
+  previousDegree = degree
+}
+}
+
+function resetCropper(){
+if(cropper !== "")
+{
+  cropper.reset()
+  document.getElementById('rotateInput').value = ""
+  previousDegree=0;
+}
+}
+
+resizeBtn.addEventListener("click", (event)=>{
+    event.preventDefault()
+    
+
+
+    if(croppedImageURL !== "")
+    {
+      
+      if(input_Width.value === "" || Number(input_Width.value) === 0)
+      {
+             input_Width.focus()
+             alert("Enter New width")
+             return       
+      }
+      if(input_Height.value === "" || Number(input_Height.value) === 0)
+      {
+             input_Height.focus()
+             alert("Enter New Height")
+             return       
+      }
+    
+      var newWidth = input_Width.value
+      var newHeight = input_Height.value
+      if(width_label.innerHTML == "pixel"){
+           // no change
+      }
+      else if(width_label.innerHTML == "mm"){
+                newWidth = newWidth * 96 / 25.4
+                newHeight = newHeight * 96 / 25.4  
+        }
+       else if(width_label.innerHTML == "cm"){
+                newWidth = newWidth * 96 / 2.54
+                newHeight = newHeight * 96 / 2.54
+        }
+       else if(width_label.innerHTML == "inch"){
+                newWidth = newWidth * 96 
+                newHeight = newHeight * 96 
+        }
+       
+          $('#croppedImg').hide()
+          $('#loadingImage').show()
+      
+          var urlofimage = croppedImg.src
+          urlofimage=urlofimage.split("?t=")[0];  // removing time stamp (time stamp added to reload image)
+
+          console.log("#  # "+urlofimage)
+
+          var formData = new FormData();
+          formData.append('filepath', urlofimage);
+          formData.append('width',newWidth)
+          formData.append('height',newHeight)
+          $.ajax('getresizedimage.php', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+            
+              
+              var filesizebytes =  1*(response.split("||")[1]);
+              document.getElementById('fileinKB').innerHTML = getFileKBMB(filesizebytes)
+             
+             
+             refreshImage(croppedImg,response.split("||")[0])
+             console.log(response)
+             
+             labelWH_width_px = 1*response.split("||")[2];   // global variable
+             labelWH_height_px = 1*response.split("||")[3];  // global varibale
+
+             updatecroppedimagelabel(labelWH_width_px,labelWH_height_px)
+             $('#loadingImage').hide()
+             $('#croppedImg').show()
+            },
+            error: function () {
+              console.log('Upload error');
+              $('#loadingImage').hide()
+              $('#croppedImg').show()
+            }
+          });
+
+    }
+    else{
+
+      alert("****** First Crop the image  ******")
+
+    }
+
+});
+
+function upload_croppedImage()
+{
+
+    var width=0;
+    var height=0;
+  
+     fetch(croppedImageURL)  // get image src which is generated by clicking on crop button
+    .then(function (response) {
+       return response.blob();
+    })
+    .then(function (blob) {
+          var formData = new FormData();
+           console.log(blob)
+        // var file = new File(blob, "name");
+          const file = new File([blob], 'untitled', { type: blob.type })
+          formData.append('image', file);
+          
+         $('#croppedImg').hide()
+         $('#loadingImage').show()
+
+          $.ajax('uploadONcrop.php', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+
+              
+              var filesizebytes = 1*data.split("||")[1];
+              document.getElementById('fileinKB').innerHTML = getFileKBMB(filesizebytes)
+             
+              var newImageElement = data.split("||")[0];
+             var inputParent = croppedImageDiv;  //croppedImg.parentNode; // Get the parent object of the input
+              if(croppedImg !== null)
+              inputParent.removeChild(croppedImg); // Remove it through its parent object
+            //  inputParent.appendChild(newImageElement);
+               
+            $('#loadingImage').hide()
+              
+             inputParent.innerHTML += newImageElement
+             $('#croppedImg').show()
+              // again intialize croppedImg width new element
+              croppedImg = document.getElementById('croppedImg')
+               
+             labelWH_width_px = 1*data.split("||")[2];   // global variable
+             labelWH_height_px = 1*data.split("||")[3];  // global variable
+             updatecroppedimagelabel(labelWH_width_px,labelWH_height_px)
+
+
+            },
+            error: function () {
+              console.log('Upload error');
+              $('#loadingImage').hide()
+              $('#croppedImg').show()
+            }
+          });
+
+    });  
+
+
+}
+
+function refreshImage(imgElement, imgURL){    
+  // create a new timestamp 
+  var timestamp = new Date().getTime();  
+  var queryString = "?t=" + timestamp;    
+  imgElement.src = imgURL + queryString;    
+} 
+
+function updatecroppedimagelabel(width,height){
+    var selected_value;
+    for(var i = 0; i < radioBtn.length; i++){
+        if(radioBtn[i].checked){
+            selected_value = radioBtn[i].value;
+        }
+    }
+    if(selected_value == "pixelselected")
+    {
+      // no need to change because already in pixel   
+    }
+    else if(selected_value == "mmselected")
+    {
+      width =  10 * width * 2.54 / 96
+      height = 10 * height * 2.54 / 96
+    }
+   else if(selected_value == "cmselected")
+   {
+      width = width * 2.54 / 96
+      height = height * 2.54 / 96
+   }
+    else if(selected_value == "inchselected")
+    {
+      width = width / 96
+      height = height / 96
+    }
+    else{
+      console.log("Some error occured in newwidthheight function")
+      return
+    }
+
+    croppedpreviewsize.innerHTML = parseFloat(width).toFixed(2) + " | " + parseFloat(height).toFixed(2)
+ 
+}
+
+compressBtn.addEventListener("click", (event)=>{
+     event.preventDefault()
+
+ if(croppedImageURL !== ""){
+
+  var x;
+  var compress=prompt("Please Enter (1-100)% to Compress");
+  if (compress != null && !isNaN(compress) ){
+     if(compress > 0 && compress <101) 
+     {
+      $('#croppedImg').hide()
+      $('#loadingImage').show()
+       
+          var urlofimage = croppedImg.src
+          urlofimage=urlofimage.split("?t=")[0];  // removing time stamp (time stamp added to reload image)
+
+          var formData = new FormData();
+          formData.append('filepath', urlofimage);
+          formData.append('quality',(100-compress))
+          $.ajax('compressImage.php', {
+            method: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+            
+
+              var filesizebytes = 1*(response.split("||")[1]);
+
+              document.getElementById('fileinKB').innerHTML = getFileKBMB(filesizebytes)
+             
+             
+             refreshImage(croppedImg,response.split("||")[0])
+             console.log(response)
+             
+             labelWH_width_px = 1*response.split("||")[2];   // global variable
+             labelWH_height_px = 1*response.split("||")[3];  // global varibale
+
+             updatecroppedimagelabel(labelWH_width_px,labelWH_height_px)
+
+              $('#loadingImage').hide(); 
+                $('#croppedImg').show()
+            },
+            error: function () {
+              console.log('Upload error');
+              $('#loadingImage').hide(); 
+              $('#croppedImg').show()
+            }
+          });
+
+     }else{
+      alert("Enter only number range in 1 to 100")
+     }
+     
+
+     }
+     else{
+      alert("Enter only number range in 1 to 100")
+     }
+
+  }
+  else{
+    alert("*** First Crop the Image *****")
+  }
+
+})
+
+function getFileKBMB(filebytes)
+{
+if(filebytes >= 1048576)
+{
+  filebytes = (filebytes/1048576).toFixed(2)
+  filebytes = filebytes+" MB"
+}
+else{
+  filebytes = (filebytes/1024).toFixed(2)
+  filebytes = filebytes+" KB"
+}
+return filebytes
+}
+</script>
+  
+
+</body>
+
+
+
+</html>
